@@ -1,4 +1,4 @@
-# Site de vente — « Trading à sens unique »
+# Site de vente — « Trading  unique »
 
 Site statique complet (HTML / CSS / JS), sans base de données, prêt à héberger.
 Prix : **5 $** · Livraison : **PDF**.
