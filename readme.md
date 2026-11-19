@@ -1,7 +1,7 @@
 # Site de vente — « Trading à sens unique »
 
 Site statique complet (HTML / CSS / JS), sans base de données, prêt à héberger.
-Prix : **20 $** · Livraison : **PDF**.
+Prix : **5 $** · Livraison : **PDF**.
 
 ---
 
@@ -47,7 +47,7 @@ Les prix (`data-price`) et la garantie se mettent à jour automatiquement partou
 
 Ils gèrent **paiement + livraison automatique du PDF + factures + TVA**.
 
-1. Crée un produit à 20 $, upload le PDF.
+1. Crée un produit à 5 $, upload le PDF.
 2. Copie le lien du produit dans `gumroadUrl`.
 3. Terminé : le bouton principal envoie directement chez eux.
 
@@ -58,7 +58,7 @@ directement dans la carte de prix.
 
 - Le `paypalClientId` est déjà renseigné dans `assets/config.js`.
 - Un **client ID est public** : il peut rester dans le code, ce n'est pas un secret.
-- Devise : `currency: "USD"` → 20 $. Les symboles affichés (`$`, `USD`) suivent
+- Devise : `currency: "USD"` → 5 $. Les symboles affichés (`$`, `USD`) suivent
   automatiquement ce réglage (`EUR`, `GBP`, `MGA`…).
 - Après paiement, le client est redirigé vers `merci.html`.
 
@@ -67,7 +67,7 @@ directement dans la carte de prix.
 1. Les boutons PayPal **ne fonctionnent qu'en http/https** (pas en `file://`).
    Teste via Netlify ou `python -m http.server 8765` dans le dossier.
 2. Si PayPal refuse la devise (`currency not supported`), passe `currency`
-   à `"EUR"` : le site affichera automatiquement `20 €`.
+   à `"EUR"` : le site affichera automatiquement `5 €`.
 3. `createOrder` + `capture` côté navigateur : simple et suffisant pour un
    ebook, mais la page `merci.html` reste accessible par URL directe.
    Pour une livraison réellement protégée → Gumroad (option A).
@@ -77,7 +77,7 @@ directement dans la carte de prix.
 
 ### Option C — Stripe Payment Link
 
-1. Stripe → Paiements → Créer un lien de paiement (20 USD).
+1. Stripe → Paiements → Créer un lien de paiement (5 USD).
 2. Dans les réglages du lien, mets l'URL de confirmation :
    `https://tonsite.com/merci.html`
 3. Colle le lien dans `stripeUrl`.
